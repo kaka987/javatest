@@ -1,0 +1,20 @@
+group 'com.hello'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'jetty'
+
+sourceCompatibility = 1.5
+
+repositories {
+   mavenCentral()
+}
+
+jettyRun{
+   contextPath = "demo"
+   httpPort = 8080
+}
+
+dependencies {
+   compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
+   testCompile group: 'junit', name: 'junit', version: '4.11'
+}
